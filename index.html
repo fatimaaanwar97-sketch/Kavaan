@@ -8,15 +8,21 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- DECORATIVE BACKGROUND BLOBS -->
+  <div class="bg-blob bg-blob-left"></div>
+  <div class="bg-blob bg-blob-right"></div>
+
   <!-- ===== NAVBAR ===== -->
-  <header class="nav">
+  <header class="nav" id="top-nav">
     <div class="nav-inner container">
       <div class="brand">
-        <div class="brand-icon">K</div>
+        <div class="brand-icon">
+          <!-- you can replace with an SVG/icon later -->
+          <span>🪑</span>
+        </div>
         <span class="brand-name">Kavaan</span>
       </div>
 
@@ -26,14 +32,15 @@
         <a href="#about">About</a>
       </nav>
 
-      <a href="#cta" class="btn btn-pill btn-nav">Try Now</a>
+      <a href="#cta" class="btn btn-primary btn-nav">Try Now</a>
     </div>
   </header>
 
+  <!-- ===== HERO SECTION ===== -->
   <main>
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="top">
+    <section class="hero">
       <div class="hero-inner container">
+        <!-- LEFT: TEXT -->
         <div class="hero-text">
           <h1 class="hero-title">
             <span class="hero-word hero-word-1">Dream.</span><br />
@@ -46,34 +53,40 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#cta" class="btn btn-primary">Generate My Idea ✨</a>
-            <a href="#features" class="btn btn-secondary">See Examples</a>
+            <a href="#cta" class="btn btn-primary btn-main">
+              Generate My Idea <span class="hero-emoji">💡</span>
+            </a>
+            <a href="#features" class="btn btn-outline">
+              See Examples
+            </a>
           </div>
 
           <div class="hero-social-proof">
             <div class="avatars">
-              <!-- Replace with your own avatar images if you like -->
+              <!-- Replace these with real avatar images if you want -->
               <span class="avatar avatar-1"></span>
               <span class="avatar avatar-2"></span>
               <span class="avatar avatar-3"></span>
             </div>
-            <p class="social-caption">
-              <strong>1,200+ creators</strong> already dreaming with us
-            </p>
+            <div class="social-text">
+              <span class="social-bold">1,200+ creators</span><br />
+              <span class="social-muted">already dreaming with us</span>
+            </div>
           </div>
         </div>
 
+        <!-- RIGHT: IMAGE -->
         <div class="hero-visual">
-          <!-- Replace src with your exported hero image from Figma -->
           <div class="hero-image-card">
+            <!-- export this image from Figma and save as /images/hero-chair.png -->
             <img src="images/hero-chair.png" alt="Lavender 3D chair" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== AI MAGIC SECTION ===== -->
-    <section class="section section-light" id="features">
+        <!-- ===== FEATURES SECTION – AI Magic in Action ===== -->
+    <section class="section-features" id="features">
       <div class="container">
         <div class="section-heading">
           <h2>AI Magic in Action</h2>
@@ -82,137 +95,49 @@
           </p>
         </div>
 
-        <div class="card-grid card-grid-3">
+        <div class="features-grid">
+          <!-- Card 1 -->
           <article class="feature-card">
-            <img src="images/card-whimsical.png" alt="Whimsical couch" />
+            <div class="feature-card-image">
+              <!-- export this from Figma -->
+              <img src="images/feature-whimsical-forms.png" alt="Whimsical sofa" />
+            </div>
             <h3>Whimsical Forms</h3>
-            <p>Organic shapes that feel like they’re from a dream, crafted with AI precision and creativity.</p>
+            <p>
+              Organic shapes that feel like they’re from a dream, crafted with AI precision
+              and creativity.
+            </p>
           </article>
 
+          <!-- Card 2 -->
           <article class="feature-card">
-            <img src="images/card-soft-geometry.png" alt="Soft geometric table" />
+            <div class="feature-card-image">
+              <img src="images/feature-soft-geometry.png" alt="Soft geometric table" />
+            </div>
             <h3>Soft Geometry</h3>
-            <p>Perfect balance of structure and softness for furniture that’s both functional and beautiful.</p>
+            <p>
+              Perfect balance of structure and softness, creating furniture that’s both
+              functional and beautiful.
+            </p>
           </article>
 
+          <!-- Card 3 -->
           <article class="feature-card">
-            <img src="images/card-ai-magic.png" alt="AI magic furniture object" />
+            <div class="feature-card-image">
+              <img src="images/feature-ai-magic.png" alt="Floating AI object" />
+            </div>
             <h3>AI Magic</h3>
-            <p>Impossible becomes possible with AI-powered creativity that pushes the boundaries of design.</p>
+            <p>
+              Impossible becomes possible with AI-powered creativity that pushes the
+              boundaries of design.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== CREATIVE GALLERY ===== -->
-    <section class="section section-gradient" id="gallery">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Creative Gallery</h2>
-          <p>Explore endless possibilities of AI-generated furniture concepts.</p>
-        </div>
-
-        <div class="card-grid card-grid-4">
-          <article class="gallery-card">
-            <img src="images/gallery-floating-comfort.png" alt="Floating chair" />
-            <h3>Floating Comfort</h3>
-            <p>A chair that defies gravity and convention.</p>
-          </article>
-
-          <article class="gallery-card">
-            <img src="images/gallery-wave-table.png" alt="Wave table" />
-            <h3>Wave Table</h3>
-            <p>Dining, redefined with flowing forms.</p>
-          </article>
-
-          <article class="gallery-card">
-            <img src="images/gallery-bubble-library.png" alt="Bubble library bookshelf" />
-            <h3>Bubble Library</h3>
-            <p>Storage that feels like art.</p>
-          </article>
-
-          <article class="gallery-card">
-            <img src="images/gallery-cloud-ottoman.png" alt="Cloud ottoman" />
-            <h3>Cloud Ottoman</h3>
-            <p>Comfort meets imagination.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA STRIP ===== -->
-    <section class="section section-cta" id="cta">
-      <div class="container">
-        <div class="cta-card">
-          <div class="cta-icon">✨</div>
-          <h2>Start Imagining with Kavaan</h2>
-          <p>
-            Transform your wildest furniture dreams into stunning visual concepts.  
-            The only limit is your imagination.
-          </p>
-          <a href="#top" class="btn btn-primary btn-lg">Sign in to Create Your First Design ✨</a>
-          <p class="cta-note">No credit card required • Free to start • Unlimited creativity</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT (OPTIONAL SHORT SECTION) ===== -->
-    <section class="section section-light" id="about">
-      <div class="container about-layout">
-        <div>
-          <h2>About Kavaan</h2>
-          <p>
-            Kavaan is a playful exploration of how AI can support early-stage furniture
-            concept design. It turns simple text prompts into dreamy visual ideas,
-            helping designers move faster from imagination to form.
-          </p>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="brand">
-          <div class="brand-icon">K</div>
-          <span class="brand-name">Kavaan</span>
-        </div>
-        <p class="footer-tagline">
-          Turning imagination into beautiful furniture through AI creativity.
-        </p>
-      </div>
-
-      <div class="footer-columns">
-        <div class="footer-column">
-          <h4>Product</h4>
-          <a href="#features">Features</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#cta">Pricing</a>
-        </div>
-        <div class="footer-column">
-          <h4>Company</h4>
-          <a href="#about">About</a>
-          <a href="#about">Blog</a>
-          <a href="#about">Contact</a>
-        </div>
-        <div class="footer-column">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="Instagram">◎</a>
-            <a href="#" aria-label="Dribbble">●</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2024 Kavaan. All rights reserved. Made with 💜 for creative minds.</p>
-    </div>
-
-    <script src="script.js"></script>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
