@@ -466,6 +466,79 @@ body {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 24px 60px rgba(147, 113, 220, 0.35);
 }
+/* =========================
+   GALLERY SECTION
+   ========================= */
+
+.section-gallery {
+  padding: 80px 0 96px;
+  background: linear-gradient(
+    180deg,
+    #f6f1ff 0%,
+    #f7ecff 40%,
+    #ffeaf5 100%
+  );
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 32px;
+  padding: 22px 22px 24px;
+  box-shadow: 0 18px 45px rgba(147, 113, 220, 0.22);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.65),
+    transparent 55%
+  );
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.gallery-card-image {
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.gallery-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  color: var(--deep-purple);
+}
+
+.gallery-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* hover micro-interaction */
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(147, 113, 220, 0.35);
+}
 
 
 /* =========================
@@ -542,6 +615,26 @@ body {
   /* ...your existing hero/mobile rules... */
 
   .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 960px) {
+  /* ...existing rules... */
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  /* ...existing rules... */
+
+  .features-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 }
